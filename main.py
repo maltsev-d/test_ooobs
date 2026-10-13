@@ -23,7 +23,7 @@ def normalize_phone(raw) -> str | None:
     return None
 
 
-@app.head("/ping")
+@app.head("/")
 async def ping_check():
     return {"status": "ok"}
 
