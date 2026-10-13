@@ -23,6 +23,10 @@ def normalize_phone(raw) -> str | None:
     return None
 
 
+@app.head("/ping")
+async def ping_check():
+    return {"status": "ok"}
+
 @app.get("/")
 async def sync():
     async with httpx.AsyncClient(timeout=10) as client:
